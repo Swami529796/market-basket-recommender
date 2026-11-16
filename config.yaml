@@ -1,0 +1,33 @@
+# Settings for basket_recommender.py. Any command-line option overrides this file.
+# Paths are relative to this file.
+
+input: data/order_lines.csv.gz      # CSV or CSV.GZ, one row per order line
+output: output/basket_analysis.xlsx
+charts_dir: images
+
+columns:                            # the column names in YOUR file
+  order: order_id                   # required
+  product: product                  # required
+  date: order_date                  # optional: used to hold out the latest orders
+  category: category                # optional: needed for --level category
+  quantity: quantity                # optional: rows with zero or negative quantity are left out
+  price: unit_price                 # optional: needed for the bundle estimates
+
+level: product                      # product or category
+
+# A rule "orders with A also contain B" is kept only if it clears all of these
+min_support: 0.001                  # A and B together in at least 0.1% of all orders
+min_confidence: 0.10                # at least 10% of orders with A also contain B
+min_lift: 1.5                       # ... which must be at least 1.5 times B's normal rate
+min_orders: 20                      # A and B together in at least 20 orders
+min_gain: 0.05                      # a two-item "if" must add 5 points of confidence over one item
+max_items: 3                        # 2 = pairs only, 3 = pairs and triples
+alpha: 0.05                         # significance level, divided by the number of rules tested
+
+top_n: 5                            # recommendations per product
+holdout: 0.20                       # latest 20% of orders are kept back for the evaluation
+seed: 42                            # fixes which item is hidden in each held-out order
+
+# Bundle estimate ASSUMPTIONS: change them to match your own experience
+uptake: 0.10                        # 10% of anchor buyers who skipped an add-on take the bundle
+bundle_discount: 0.10               # 10% off the add-on items when bought as a bundle

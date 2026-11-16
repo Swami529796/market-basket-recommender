@@ -1,0 +1,26 @@
+trigger,add_on,probability,strength
+Laser Printer,Toner Cartridge,0.55,strong
+Inkjet Printer,Ink Cartridge Set,0.5,strong
+Label Printer,Label Rolls,0.5,strong
+Laminator,Laminating Pouches,0.5,strong
+Whiteboard 4x3 ft,Whiteboard Markers,0.45,strong
+Tablet 10 inch,Tablet Cover,0.4,strong
+Paper Shredder,Shredder Oil,0.4,strong
+Business Laptop,Laptop Bag + Wireless Mouse,0.2,strong
+Business Laptop,Laptop Bag,0.18,medium
+Business Laptop,Wireless Mouse,0.15,medium
+Stapler,Staples (Box),0.35,medium
+Monitor 24 inch,HDMI Cable,0.3,medium
+Desktop PC,Monitor 24 inch,0.3,medium
+Projector,Projector Screen,0.3,medium
+Wi-Fi Router,Ethernet Cable 5m,0.28,medium
+Desktop PC,Keyboard,0.25,medium
+Projector,HDMI Cable,0.25,medium
+Whiteboard 4x3 ft,Whiteboard Duster,0.25,medium
+Webcam,Headset,0.22,medium
+Office Desk,Office Chair,0.22,medium
+External Hard Drive 1TB,Hard Drive Case,0.1,weak
+Tablet 10 inch,Stylus Pen,0.1,weak
+Inkjet Printer,Photo Paper Pack,0.1,weak
+Business Laptop,Laptop Cooling Pad,0.08,weak
+Monitor 24 inch,Monitor Arm,0.07,weak
